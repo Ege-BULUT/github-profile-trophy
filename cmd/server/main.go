@@ -45,6 +45,17 @@ func main() {
 	r.GET("/", api.TrophyHandler)
 	r.GET("/docs", api.DocsHandler)
 	r.GET("/reference", api.ReferenceHandler)
+	r.GET("/robots.txt", func(c *gin.Context) {
+		c.String(200, "User-agent: *\nAllow: /\n\nSitemap: https://github-torphy.vercel.app/sitemap.xml\n")
+	})
+	r.GET("/sitemap.xml", func(c *gin.Context) {
+		c.Data(200, "application/xml; charset=utf-8", []byte(`<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://github-torphy.vercel.app/</loc></url>
+  <url><loc>https://github-torphy.vercel.app/docs</loc></url>
+</urlset>
+`))
+	})
 
 	// Get port from environment or use default
 	port := os.Getenv("PORT")

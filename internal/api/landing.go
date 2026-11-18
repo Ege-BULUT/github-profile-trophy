@@ -13,6 +13,14 @@ const landingPageHTML = `<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#07111d">
   <meta name="description" content="Generate a live GitHub Profile Trophy card with a polished preview.">
+  <link rel="canonical" href="https://github-torphy.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="GitHub Trophy Lab">
+  <meta property="og:url" content="https://github-torphy.vercel.app/">
+  <meta property="og:title" content="GitHub Trophy Lab">
+  <meta property="og:description" content="Generate a live GitHub Profile Trophy card with a polished preview.">
+  <meta name="twitter:card" content="summary">
+  <meta name="google-site-verification" content="s66rd8O_x1saL6PLGpSpIPeHmGazHyTo27NTPkK-GJg">
   <title>GitHub Trophy Lab</title>
   <style>
     :root {
@@ -326,6 +334,8 @@ const docsPageHTML = `<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#07111d">
   <title>GitHub Trophy Lab — Docs</title>
+  <meta name="description" content="How GitHub Trophy Lab works: the trophy endpoint, its query parameters and running your own renderer.">
+  <link rel="canonical" href="https://github-torphy.vercel.app/docs">
   <style>
     :root { color-scheme: dark; --ink: #f4f8fb; --muted: #9baebe; --quiet: #718294; --line: rgba(214, 237, 246, .14); --mint: #8df0cb; --radius-xl: 28px; --shadow: 0 26px 80px rgba(0,0,0,.34); }
     * { box-sizing: border-box; }
