@@ -16,6 +16,11 @@ import (
 
 // TrophyHandler handles trophy card requests
 func TrophyHandler(c *gin.Context) {
+	if c.Request.URL.RawQuery == "" {
+		renderLandingPage(c)
+		return
+	}
+
 	// Recover from panics
 	defer func() {
 		if r := recover(); r != nil {

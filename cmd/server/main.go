@@ -43,6 +43,8 @@ func main() {
 
 	// API routes
 	r.GET("/", api.TrophyHandler)
+	r.GET("/docs", api.DocsHandler)
+	r.GET("/reference", api.ReferenceHandler)
 
 	// Get port from environment or use default
 	port := os.Getenv("PORT")

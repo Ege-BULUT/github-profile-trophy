@@ -171,6 +171,28 @@ Then embed the generated image in your README:
 
 ## 🚀 Quick Start
 
+### Vercel Deployment
+
+This repository includes a `vercel.json` configured for Vercel's Go runtime.
+The runtime detects `cmd/server/main.go` and uses the `PORT` environment
+variable automatically.
+
+Before deploying, add a GitHub personal access token to the Vercel project as
+the `GITHUB_TOKEN1` environment variable. The token is used only for GitHub
+GraphQL API requests and must not be committed to the repository.
+
+After deployment, use the Vercel URL as the image base URL:
+
+```markdown
+[![trophy](https://github-torphy.vercel.app/?username=ege-bulut&rank=-?&column=-1&margin-w=25&no-bg=true)](https://github.com/ege-bulut)
+```
+
+The endpoint keeps the upstream-compatible query parameters, including
+`username`, `rank`, `column`, `margin-w`, and `no-bg`.
+
+The same deployment also serves a studio UI at the root URL. It renders a live
+preview from the endpoint and copies the README Markdown for you.
+
 ### Option 1: Docker (Recommended - Easiest)
 
 ```bash
